@@ -1,4 +1,4 @@
 import Header from './components/Header';
-import Select from './components/Select';
+import Navbar from './components/Navbar';
 
-export { Header, Select };
+export { Header, Navbar };

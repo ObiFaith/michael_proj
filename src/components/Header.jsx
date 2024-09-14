@@ -1,65 +1,99 @@
 import { logo } from '@/assets';
-import { DollarSign, RefreshCcwIcon } from 'lucide-react';
 import {
-	Select,
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
-	SelectValue,
-} from './ui/select';
-import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
+	ChevronDown,
+	DollarSign,
+	Gift,
+	Mail,
+	RefreshCcwIcon,
+	Settings,
+	User,
+} from 'lucide-react';
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuGroup,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from './ui/dropdown-menu';
+import { Navbar } from '..';
 
 const Header = () => {
 	return (
-		<header className="flex bg-blue-900 py-6">
-			<div className="border-white border-2">
-				<img src={logo} alt="logo" />
+		<header className="flex items-center font-roboto bg-[#205583] py-4 px-2">
+			<div className="flex items-center w-full">
+				<div className="w-24 self-end">
+					<img src={logo} alt="logo" />
+				</div>
+				<Navbar />
 			</div>
-			<div className=""></div>
 			<div className="flex gap-4 items-center">
-				<div className="flex rounded-sm bg-blue-600 px-2">
+				<div className="flex min-w-48 rounded-sm bg-[#276aa5] px-2">
 					<RefreshCcwIcon
 						strokeWidth={3}
-						size={14}
+						size={10}
 						className="my-auto text-gray-100"
 					/>
-					<div className="w-0.5 bg-blue-400 mx-2"></div>
-					<Select>
-						<Tooltip>
-							<TooltipTrigger>
-								<SelectTrigger className="bg-transparent gap-4 outline-none text-gray-100 border-0 p-0">
-									<SelectValue
-										className="text-blue-400"
-										placeholder="Main Account (NGN)"
-									/>
-								</SelectTrigger>
-							</TooltipTrigger>
-							<TooltipContent>
-								<p>Select account</p>
-							</TooltipContent>
-						</Tooltip>
-						<SelectContent className="text-blue-800">
-							<SelectItem value="naira" className="px-4 py-2">
-								<div className="flex gap-10">
-                  <span>Main Account (NGN)</span>
-                  <span>1.3</span>
-                </div>
-							</SelectItem>
-							<SelectItem value="usd">
-								Other Currencies (USD)
-							</SelectItem>
-						</SelectContent>
-					</Select>
+					<div className="w-[1px] bg-gray-400 h-6 my-auto mx-2"></div>
+					<DropdownMenu>
+						<DropdownMenuTrigger asChild>
+							<div className="flex gap-4 py-0.5 items-center">
+								<div className="grid gap-0.5">
+									<p className="text-xs text-gray-200">
+										Main account (NGN)
+									</p>
+									<p className="text-xs text-white">1.3</p>
+								</div>
+								<ChevronDown color="white" size={16} />
+							</div>
+						</DropdownMenuTrigger>
+						<DropdownMenuContent className="w-80">
+							<DropdownMenuGroup>
+								<DropdownMenuItem className="flex-col pt-0">
+									<div className="flex justify-between w-full">
+										<p className="text-xs">
+											Main Account (NGN)
+										</p>
+										<p className="text-xs">1.3</p>
+									</div>
+									<div className="flex justify-between w-full">
+										<p className="text-xs">
+											Unsettled bets
+										</p>
+										<p className="text-xs">0</p>
+									</div>
+								</DropdownMenuItem>
+								<DropdownMenuItem className="pt-0">
+									<div className="flex justify-between w-full">
+										<p className="text-xs">
+											Other currencies (USD)
+										</p>
+										<p className="text-xs">0</p>
+									</div>
+								</DropdownMenuItem>
+							</DropdownMenuGroup>
+						</DropdownMenuContent>
+					</DropdownMenu>
 				</div>
 				<div className="flex gap-2">
-					<div className="bg-green-500 rounded-sm p-1.5">
-						<DollarSign color="white" />
+					<div className="bg-[#7eac2f] rounded-sm p-1.5">
+						<DollarSign size={20} color="white" strokeWidth={2} />
 					</div>
-					<div className=""></div>
-					<div className=""></div>
-					<div className=""></div>
+					<div className="bg-[#276aa5] rounded-sm p-1.5">
+						<Gift size={20} color="white" strokeWidth={2} />
+					</div>
+					<div className="bg-[#276aa5] flex items-center gap-0.5 rounded-sm p-1.5">
+						<Mail size={20} color="white" strokeWidth={2} />
+						<ChevronDown size={18} color="white" />
+					</div>
+					<div className="bg-[#276aa5] flex items-center gap-0.5 rounded-sm p-1.5">
+						<User size={20} color="white" strokeWidth={2} />
+						<ChevronDown size={18} color="white" />
+					</div>
 				</div>
-				<div className=""></div>
+				<div className="bg-[#276aa5] flex items-center gap-0.5 rounded-sm p-1.5">
+					<Settings size={20} color="white" strokeWidth={2} />
+					<ChevronDown size={18} color="white" />
+				</div>
 			</div>
 		</header>
 	);
