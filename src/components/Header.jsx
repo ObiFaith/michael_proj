@@ -19,14 +19,14 @@ import { Navbar } from '..';
 
 const Header = () => {
 	return (
-		<header className="flex items-center font-roboto bg-[#205583] py-4 px-2">
-			<div className="flex items-center w-full">
+		<header className="flex gap-5 items-center font-roboto bg-[#205583] py-4 px-2 overflow-x-hidden">
+			<div className="flex gap-4 items-center w-full">
 				<div className="w-24 self-end">
 					<img src={logo} alt="logo" />
 				</div>
 				<Navbar />
 			</div>
-			<div className="flex gap-4 items-center">
+			<div className="flex md:gap-4 gap-2 items-center">
 				<div className="flex min-w-48 rounded-sm bg-[#276aa5] px-2">
 					<RefreshCcwIcon
 						strokeWidth={3}
@@ -74,7 +74,7 @@ const Header = () => {
 						</DropdownMenuContent>
 					</DropdownMenu>
 				</div>
-				<div className="flex gap-2">
+				<div className="flex gap-1 md:gap-2">
 					<div className="bg-[#7eac2f] rounded-sm p-1.5">
 						<DollarSign size={20} color="white" strokeWidth={2} />
 					</div>

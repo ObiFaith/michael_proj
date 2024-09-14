@@ -1,4 +1,5 @@
 import logo from './icons/logo.svg';
+import spin_throne from './icons/spin_throne.svg';
 
 import twOne from './images/21.webp';
 import games from './images/games.webp';
@@ -9,4 +10,4 @@ import crystal from './images/crystal.webp';
 import western from './images/western.webp';
 import indianPoker from './images/indian-poker.webp';
 
-export { logo, twOne, crash, crystal, indianPoker, western, under7, vampire, games};
+export { logo, twOne, crash, crystal, spin_throne, indianPoker, western, under7, vampire, games};
