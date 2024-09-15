@@ -19,7 +19,7 @@ import { Navbar } from '..';
 
 const Header = () => {
 	return (
-		<header className="flex gap-5 items-center font-roboto bg-[#205583] py-4 px-2 overflow-x-hidden">
+		<header className="flex gap-5 items-center font-roboto bg-blue-400 py-4 px-2.5 overflow-x-hidden">
 			<div className="flex gap-4 items-center w-full">
 				<div className="w-24 self-end">
 					<img src={logo} alt="logo" />
@@ -27,7 +27,7 @@ const Header = () => {
 				<Navbar />
 			</div>
 			<div className="flex md:gap-4 gap-2 items-center">
-				<div className="flex min-w-48 rounded-sm bg-[#276aa5] px-2">
+				<div className="flex min-w-48 rounded-sm bg-foreground px-2">
 					<RefreshCcwIcon
 						strokeWidth={3}
 						size={10}
@@ -38,7 +38,7 @@ const Header = () => {
 						<DropdownMenuTrigger asChild>
 							<div className="flex gap-4 py-0.5 items-center">
 								<div className="grid gap-0.5">
-									<p className="text-xs text-gray-200">
+									<p className="text-xs text-gray-300">
 										Main account (NGN)
 									</p>
 									<p className="text-xs text-white">1.3</p>
@@ -75,22 +75,22 @@ const Header = () => {
 					</DropdownMenu>
 				</div>
 				<div className="flex gap-1 md:gap-2">
-					<div className="bg-[#7eac2f] rounded-sm p-1.5">
+					<div className="bg-secondary rounded-sm p-1.5">
 						<DollarSign size={20} color="white" strokeWidth={2} />
 					</div>
-					<div className="bg-[#276aa5] rounded-sm p-1.5">
+					<div className="bg-foreground rounded-sm p-1.5">
 						<Gift size={20} color="white" strokeWidth={2} />
 					</div>
-					<div className="bg-[#276aa5] flex items-center gap-0.5 rounded-sm p-1.5">
+					<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-1.5">
 						<Mail size={20} color="white" strokeWidth={2} />
 						<ChevronDown size={18} color="white" />
 					</div>
-					<div className="bg-[#276aa5] flex items-center gap-0.5 rounded-sm p-1.5">
+					<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-1.5">
 						<User size={20} color="white" strokeWidth={2} />
 						<ChevronDown size={18} color="white" />
 					</div>
 				</div>
-				<div className="bg-[#276aa5] flex items-center gap-0.5 rounded-sm p-1.5">
+				<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-1.5">
 					<Settings size={20} color="white" strokeWidth={2} />
 					<ChevronDown size={18} color="white" />
 				</div>

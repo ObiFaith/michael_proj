@@ -22,7 +22,7 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
-				<div className="flex gap-1.5 md:gap-3 items-center text-xs">
+				<div className="flex max-lg:hidden gap-1.5 md:gap-3 items-center text-xs">
 					<GiStrawberry className="md:size-6 size-4" />
 					Fruits
 				</div>

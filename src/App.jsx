@@ -1,12 +1,14 @@
-import { Header } from '.';
-import { TooltipProvider } from './components/ui/tooltip';
+import { BetInfo, Header, ImageSlides, Sidebar } from '.';
 
 const App = () => {
 	return (
 		<>
-			<TooltipProvider>
-				<Header />
-			</TooltipProvider>
+			<Header />
+			<main className="bg-background gap-2.5 grid grid-cols-[50px_1fr_250px] lg:grid-cols-[50px_7fr_2fr] p-2.5">
+				<Sidebar />
+				<ImageSlides />
+				<BetInfo />
+			</main>
 		</>
 	);
 };

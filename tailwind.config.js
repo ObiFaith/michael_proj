@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
 export const darkMode = ['class'];
 export const content = [
 	'./pages/**/*.{js,jsx}',
@@ -15,42 +17,50 @@ export const theme = {
 			'2xl': '1400px',
 		},
 	},
-	extend: {
-		colors: {
-			border: 'hsl(var(--border))',
-			input: 'hsl(var(--input))',
-			ring: 'hsl(var(--ring))',
-			background: 'hsl(var(--background))',
-			foreground: 'hsl(var(--foreground))',
-			primary: {
-				DEFAULT: 'hsl(var(--primary))',
-				foreground: 'hsl(var(--primary-foreground))',
-			},
-			secondary: {
-				DEFAULT: 'hsl(var(--secondary))',
-				foreground: 'hsl(var(--secondary-foreground))',
-			},
-			destructive: {
-				DEFAULT: 'hsl(var(--destructive))',
-				foreground: 'hsl(var(--destructive-foreground))',
-			},
-			muted: {
-				DEFAULT: 'hsl(var(--muted))',
-				foreground: 'hsl(var(--muted-foreground))',
-			},
-			accent: {
-				DEFAULT: 'hsl(var(--accent))',
-				foreground: 'hsl(var(--accent-foreground))',
-			},
-			popover: {
-				DEFAULT: 'hsl(var(--popover))',
-				foreground: 'hsl(var(--popover-foreground))',
-			},
-			card: {
-				DEFAULT: 'hsl(var(--card))',
-				foreground: 'hsl(var(--card-foreground))',
-			},
+	colors: {
+		gray: colors.gray,
+		white: colors.white,
+		blue: {
+			50: '#e9eef2',
+			100: '#a1bcd4',
+			200: '#d4dee8',
+			400: '#205583',
 		},
+		border: 'hsl(var(--border))',
+		input: 'hsl(var(--input))',
+		ring: 'hsl(var(--ring))',
+		background: 'hsl(var(--background))',
+		foreground: 'hsl(var(--foreground))',
+		primary: {
+			DEFAULT: 'hsl(var(--primary))',
+			foreground: 'hsl(var(--primary-foreground))',
+		},
+		secondary: {
+			DEFAULT: 'hsl(var(--secondary))',
+			foreground: 'hsl(var(--secondary-foreground))',
+		},
+		destructive: {
+			DEFAULT: 'hsl(var(--destructive))',
+			foreground: 'hsl(var(--destructive-foreground))',
+		},
+		muted: {
+			DEFAULT: 'hsl(var(--muted))',
+			foreground: 'hsl(var(--muted-foreground))',
+		},
+		accent: {
+			DEFAULT: 'hsl(var(--accent))',
+			foreground: 'hsl(var(--accent-foreground))',
+		},
+		popover: {
+			DEFAULT: 'hsl(var(--popover))',
+			foreground: 'hsl(var(--popover-foreground))',
+		},
+		card: {
+			DEFAULT: 'hsl(var(--card))',
+			foreground: 'hsl(var(--card-foreground))',
+		},
+	},
+	extend: {
 		borderRadius: {
 			lg: 'var(--radius)',
 			md: 'calc(var(--radius) - 2px)',
@@ -75,5 +85,8 @@ export const theme = {
 		},
 	},
 };
-// eslint-disable-next-line no-undef
-export const plugins = [require('tailwindcss-animate')];
+
+export const plugins = [
+	require('tailwindcss-animate'),
+	require('tailwind-scrollbar'),
+];
