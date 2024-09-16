@@ -19,9 +19,17 @@ const BetInfo = ({ isCollapsed, setCollapsed }) => {
 					{ header: 'My bets', component: <Bets /> },
 				]}
 			/>
-			<p className="text-sm text-center uppercase py-2 rounded-sm text-white bg-foreground">
-				bet slip sales
-			</p>
+			{isCollapsed ? (
+				<div className="text-sm max-w-8 grid gap-3 rotate-180 uppercase py-4 rounded-sm text-white bg-foreground">
+					<div className="rotate-90">bet</div>
+					<div className="rotate-90">slip</div>
+					<div className="rotate-90">sales</div>
+				</div>
+			) : (
+				<p className="text-sm text-center uppercase py-2 rounded-sm text-white bg-foreground">
+					bet slip sales
+				</p>
+			)}
 		</div>
 	);
 };

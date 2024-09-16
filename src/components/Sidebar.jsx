@@ -5,7 +5,7 @@ import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
 
 const Sidebar = () => {
 	return (
-		<div className="grid gap-2">
+		<div className="grid gap-2 w-[5%]">
 			<div className="*:bg-foreground *:size-8 *:rounded-sm *:p-1 grid gap-0.5">
 				<ThumbsUp color="white" />
 				<Trophy color="white" />

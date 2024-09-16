@@ -2,7 +2,7 @@ import { gameImgs } from '@/assets';
 
 const ImageSlides = () => {
 	return (
-		<div className="flex gap-2.5 rounded-t-sm pb-3 mb-2.5 overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-track-[transparent] scrollbar-thumb-white/30">
+		<div className="flex gap-2.5 rounded-t-sm pb-3 overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-track-[transparent] scrollbar-thumb-white/30">
 			{gameImgs.map(game => (
 				<div
 					className="min-w-48 text-center bg-[#224f7c]"

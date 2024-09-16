@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BetInfo, Header, ImageSlides, Sidebar } from '.';
+import { BetInfo, Header, ImageSlides, Sidebar, Carousel } from '.';
 
 const App = () => {
 	const [isCollapsed, setCollapsed] = useState(false);
@@ -14,7 +14,13 @@ const App = () => {
 				}`}
 			>
 				<Sidebar />
-				<ImageSlides />
+				<div className="grid gap-2.5">
+					<Carousel
+						slides={Array.from(Array(5).keys())}
+						options={{ loop: true }}
+					/>
+					<ImageSlides />
+				</div>
 				<BetInfo
 					isCollapsed={isCollapsed}
 					setCollapsed={setCollapsed}
