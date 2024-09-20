@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 // eslint-disable-next-line react/prop-types
-const Tabs = ({ config = [], isCollapsed }) => {
+const Tabs = ({ config = [], isCollapsed, isBgClr = false }) => {
 	const [activeTab, setActiveTab] = useState(0);
 	const [isSlipOpen, setSlipOpen] = useState(!isCollapsed);
 	const [isMyBetOpen, setMyBetOpen] = useState(!isCollapsed);
 
 	return (
-		<div className={isCollapsed ? 'relative' : ''}>
+		<div className={isCollapsed ? 'relative' : 'transition-all'}>
 			<div className={isCollapsed ? '' : 'flex'}>
 				{config.map((entry, index) => (
 					<div
@@ -18,10 +18,14 @@ const Tabs = ({ config = [], isCollapsed }) => {
 								? setSlipOpen(!isSlipOpen)
 								: setMyBetOpen(!isMyBetOpen);
 						}}
-						className={`flex py-1.5 w-full justify-center text-base items-center cursor-pointer ${
+						className={`flex py-1.5 px-2.5  w-full justify-center text-base items-center cursor-pointer ${
 							activeTab == index
-								? 'bg-foreground rounded-tl-sm text-white'
-								: 'bg-blue-400 rounded-tr-sm text-white/70'
+								? isBgClr
+									? 'bg-foreground rounded-tl-sm text-white'
+									: 'bg-blue-200 border-b-2 border-secondary'
+								: isBgClr
+								? 'bg-blue-400 rounded-tr-sm text-white/70'
+								: 'bg-blue-200'
 						} ${isCollapsed ? 'min-h-24 flex flex-col gap-2' : ''}`}
 					>
 						{isCollapsed

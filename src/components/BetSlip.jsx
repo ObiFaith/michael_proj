@@ -8,15 +8,15 @@ const BetSlip = () => {
 		<div>
 			<div className="px-2.5">
 				<div className="flex items-center justify-between">
-					<p className="text-xs font-medium uppercase">Your Bets</p>
+					<p className="text-sm font-medium uppercase">Your Bets</p>
 					<p className="bg-blue-200 p-1 rounded-sm">
 						<Settings size={14} className="text-foreground" />
 					</p>
 				</div>
-				<div className="mt-1 mb-2 text-center py-14 px-8 text-sm bg-white">
+				<div className="mt-1 mb-2 text-center py-14 px-8 text-base bg-white">
 					{isOneBet ? (
 						<div>
-							<p className="font-medium text-base">
+							<p className="font-medium text-lg">
 								One-click bet enabled
 							</p>
 							<p>

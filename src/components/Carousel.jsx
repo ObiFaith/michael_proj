@@ -34,26 +34,28 @@ const Carousel = ({ slides = [], options }) => {
 	} = usePrevNextButtons(emblaApi, onNavButtonClick);
 
 	return (
-		<section className="embla text-white relative outline-none">
+		<section className="embla text-white transition-all relative outline-none">
 			<div className="embla__viewport" ref={emblaRef}>
 				<div className="embla__container">
 					{slides.map((slide, index) => (
 						<div
 							style={{
-								background: `url(${slide.img}) no-repeat bottom right/cover`,
+								background: `url(${slide.img}) no-repeat right/cover`,
 							}}
-							className="embla__slide min-h-[15.5rem] grid items-center"
+							className="embla__slide min-h-[15.5rem]"
 							key={index}
 						>
-							<div className="min-w-[90%] md:w-[94%] grid gap-2 pb-8 ms-auto">
-								<h1 className="uppercase text-2xl sm:text-3xl font-bold md:text-4xl">
-									{slide.heading}
-								</h1>
-								<p>{slide.text}</p>
-								<div>
-									<button className="bg-secondary px-5 py-1.5 text-white">
-										{slide.btn}
-									</button>
+							<div className="py-6 bg-[#000]/25 max-sm:bg-[#000]/50 grid items-center h-full">
+								<div className="min-w-full w-full grid gap-2 *:pl-10 md:*:max-w-[500px] pb-3 ms-auto">
+									<h1 className="uppercase text-2xl sm:text-3xl font-bold md:text-4xl">
+										{slide.heading}
+									</h1>
+									<p>{slide.text}</p>
+									<div>
+										<button className="bg-secondary px-5 py-1.5 text-white">
+											{slide.btn}
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -72,17 +74,15 @@ const Carousel = ({ slides = [], options }) => {
 					/>
 				</div>
 			</div>
-			<div className="embla__controls absolute bottom-0 mx-auto">
-				<div className="embla__dots">
+			<div className="absolute bottom-6 w-full">
+				<div className="embla__dots gap-3 transition-all">
 					{scrollSnaps.map((_, index) => (
 						<DotButton
 							key={index}
 							onClick={() => onDotButtonClick(index)}
-							className={'embla__dot'.concat(
-								index === selectedIndex
-									? ' embla__dot--selected'
-									: ''
-							)}
+							className={`w-3 h-3 rounded-full
+								${index === selectedIndex ? 'w-7 bg-white' : 'bg-white/50'}
+							`}
 						/>
 					))}
 				</div>
