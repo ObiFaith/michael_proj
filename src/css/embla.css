@@ -22,12 +22,6 @@
 	min-width: 0;
 	padding-left: var(--slide-spacing);
 }
-.embla__buttons {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 0.6rem;
-	align-items: center;
-}
 .embla__dot,
 .embla__button {
 	-webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
@@ -57,8 +51,8 @@
 	color: var(--detail-high-contrast);
 }
 .embla__button__svg {
-	width: 35%;
-	height: 35%;
+	width: 45%;
+	height: 45%;
 }
 .embla__dots {
 	display: flex;

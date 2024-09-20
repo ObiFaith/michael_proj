@@ -40,7 +40,7 @@ export const usePrevNextButtons = (emblaApi, onButtonClick) => {
 export const PrevButton = ({ children, ...restProps }) => {
 	return (
 		<button
-			className="embla__button embla__button--prev bg-white/10"
+			className="embla__button bg-white/20"
 			type="button"
 			{...restProps}
 		>
@@ -58,7 +58,7 @@ export const PrevButton = ({ children, ...restProps }) => {
 export const NextButton = ({ children, ...restProps }) => {
 	return (
 		<button
-			className="embla__button embla__button--next right-0 bg-white/10"
+			className="embla__button right-0 bg-[#d4dee8]/15"
 			type="button"
 			{...restProps}
 		>

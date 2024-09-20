@@ -4,13 +4,10 @@ import { DotButton, useDotButton } from './DotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './ArrowButton';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
-import { davido } from '@/assets';
 
 // eslint-disable-next-line react/prop-types
 const Carousel = ({ slides = [], options }) => {
-	const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-		Autoplay({ delay: 3000 }),
-	]);
+	const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
 
 	const onNavButtonClick = useCallback(emblaApi => {
 		const autoplay = emblaApi?.plugins()?.autoplay;
@@ -37,28 +34,27 @@ const Carousel = ({ slides = [], options }) => {
 	} = usePrevNextButtons(emblaApi, onNavButtonClick);
 
 	return (
-		<section className="embla text-white relative">
+		<section className="embla text-white relative outline-none">
 			<div className="embla__viewport" ref={emblaRef}>
 				<div className="embla__container">
-					{slides.map(index => (
+					{slides.map((slide, index) => (
 						<div
 							style={{
-								background: `url(${davido}) no-repeat bottom right`,
+								background: `url(${slide.img}) no-repeat bottom right/cover`,
 							}}
-							className="embla__slide"
+							className="embla__slide min-h-[15.5rem] grid items-center"
 							key={index}
 						>
-							<div className="min-h-[15.5rem] p-16">
-								<h1 className="uppercase text-xl sm:text-2xl font-bold md:text-3xl">
-									The first deposit bonus
+							<div className="min-w-[90%] md:w-[94%] grid gap-2 pb-8 ms-auto">
+								<h1 className="uppercase text-2xl sm:text-3xl font-bold md:text-4xl">
+									{slide.heading}
 								</h1>
-								<p>
-									Register and receive a bonus on the 1st
-									deposit
-								</p>
-								<button className="bg-secondary text-white">
-									Bonus offer details
-								</button>
+								<p>{slide.text}</p>
+								<div>
+									<button className="bg-secondary px-5 py-1.5 text-white">
+										{slide.btn}
+									</button>
+								</div>
 							</div>
 						</div>
 					))}

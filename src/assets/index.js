@@ -18,9 +18,9 @@ import odyssey from './images/odyssey.webp';
 import indianPoker from './images/indian-poker.webp';
 import scratch_card from './images/scratch_card.webp';
 
+import jet from './images/jet.webp';
 import pfl from './images/pfl.webp';
 import psg from './images/psg.webp';
-import jet from './images/jet.webp';
 import losc from './images/losc.webp';
 import girl from './images/girl.webp';
 import money from './images/money.webp';
@@ -31,10 +31,10 @@ import casino from './images/casino.webp';
 import davido from './images/davido.webp';
 import jackpot from './images/jackpot.webp';
 import no_risk from './images/no_risk.webp';
-import cashback from './images/cashback.webp';
 import free_bet from './images/free_bet.webp';
 import money_go from './images/money_go.webp';
 import scudetto from './images/scudetto.webp';
+import cashback from './images/cashback.webp';
 import hyper_bonus from './images/hyper_bonus.webp';
 
 export { logo, spin_throne, davido };
