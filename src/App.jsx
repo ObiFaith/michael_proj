@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react';
-import { BetInfo, Carousel, Header, ImageSlides, Sidebar } from '.';
+import {
+	BetInfo,
+	Carousel,
+	Footer,
+	Header,
+	ImageSlides,
+	Sidebar,
+	Table,
+} from '.';
 import { slides } from './assets';
 
 const App = () => {
@@ -25,15 +33,17 @@ const App = () => {
 				}`}
 			>
 				<Sidebar />
-				<div className="grid gap-2.5">
+				<section className="grid gap-2.5">
 					<Carousel slides={slides} options={{ loop: true }} />
 					<ImageSlides />
-				</div>
+				</section>
 				<BetInfo
 					isCollapsed={isCollapsed}
 					setCollapsed={setCollapsed}
 				/>
+				<Table />
 			</main>
+			<Footer />
 		</>
 	);
 };

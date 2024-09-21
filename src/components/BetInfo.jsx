@@ -4,16 +4,18 @@ import { Bets, BetSlip, Tabs } from '..';
 // eslint-disable-next-line react/prop-types
 const BetInfo = ({ isCollapsed, setCollapsed }) => {
 	return (
-		<div>
+		<aside>
 			<div
 				onClick={() => setCollapsed(!isCollapsed)}
 				className="justify-center mb-2.5 cursor-pointer items-center py-2 flex gap-1 rounded-sm hover:text-white text-white/70 hover:bg-foreground bg-blue-400"
 			>
-				{!isCollapsed && <p className="text-sm">Collapse block</p>}
 				{isCollapsed ? (
 					<ChevronsLeft size={14} />
 				) : (
-					<ChevronsRight size={14} />
+					<>
+						<p className="text-sm">Collapse block</p>
+						<ChevronsRight size={14} />
+					</>
 				)}
 			</div>
 			<Tabs
@@ -35,7 +37,7 @@ const BetInfo = ({ isCollapsed, setCollapsed }) => {
 					bet slip sales
 				</p>
 			)}
-		</div>
+		</aside>
 	);
 };
 

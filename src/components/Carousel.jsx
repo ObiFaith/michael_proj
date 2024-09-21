@@ -40,17 +40,17 @@ const Carousel = ({ slides = [], options }) => {
 					{slides.map((slide, index) => (
 						<div
 							style={{
-								background: `url(${slide.img}) no-repeat right/cover`,
+								backgroundImage: `url(${slide.img})`,
 							}}
-							className="embla__slide min-h-[15.5rem]"
+							className="embla__slide bg-no-repeat bg-cover bg-center md:bg-right-bottom min-h-[15.5rem]"
 							key={index}
 						>
-							<div className="py-6 bg-[#000]/25 max-sm:bg-[#000]/50 grid items-center h-full">
-								<div className="min-w-full w-full grid gap-2 *:pl-10 md:*:max-w-[500px] pb-3 ms-auto">
+							<div className="py-6 lg:bg-[#000]/25 sm:bg-[#000]/50 max-sm:bg-[#000]/70 grid items-center h-full">
+								<div className="min-w-full grid gap-2 *:pl-10 md:*:max-w-[500px] pb-3 ms-auto">
 									<h1 className="uppercase text-2xl sm:text-3xl font-bold md:text-4xl">
 										{slide.heading}
 									</h1>
-									<p>{slide.text}</p>
+									<p className='w-4/5'>{slide.text}</p>
 									<div>
 										<button className="bg-secondary px-5 py-1.5 text-white">
 											{slide.btn}
@@ -74,7 +74,7 @@ const Carousel = ({ slides = [], options }) => {
 					/>
 				</div>
 			</div>
-			<div className="absolute bottom-6 w-full">
+			<div className="absolute bottom-6 max-sm:px-12 w-full">
 				<div className="embla__dots gap-3 transition-all">
 					{scrollSnaps.map((_, index) => (
 						<DotButton

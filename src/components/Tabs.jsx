@@ -18,13 +18,13 @@ const Tabs = ({ config = [], isCollapsed, isBgClr = false }) => {
 								? setSlipOpen(!isSlipOpen)
 								: setMyBetOpen(!isMyBetOpen);
 						}}
-						className={`flex py-1.5 px-2.5  w-full justify-center text-base items-center cursor-pointer ${
+						className={`flex py-1.5 rounded-t-sm px-2.5 font-medium w-full justify-center text-sm items-center cursor-pointer ${
 							activeTab == index
 								? isBgClr
-									? 'bg-foreground rounded-tl-sm text-white'
+									? 'bg-foreground text-white'
 									: 'bg-blue-200 border-b-2 border-secondary'
 								: isBgClr
-								? 'bg-blue-400 rounded-tr-sm text-white/70'
+								? 'bg-blue-400 text-white/70'
 								: 'bg-blue-200'
 						} ${isCollapsed ? 'min-h-24 flex flex-col gap-2' : ''}`}
 					>
