@@ -50,7 +50,7 @@ const Carousel = ({ slides = [], options }) => {
 									<h1 className="uppercase text-2xl sm:text-3xl font-bold md:text-4xl">
 										{slide.heading}
 									</h1>
-									<p className='w-4/5'>{slide.text}</p>
+									<p className="w-4/5">{slide.text}</p>
 									<div>
 										<button className="bg-secondary px-5 py-1.5 text-white">
 											{slide.btn}
@@ -74,7 +74,7 @@ const Carousel = ({ slides = [], options }) => {
 					/>
 				</div>
 			</div>
-			<div className="absolute bottom-6 max-sm:px-12 w-full">
+			<div className="absolute bottom-6 max-sm:hidden max-sm:px-12 w-full">
 				<div className="embla__dots gap-3 transition-all">
 					{scrollSnaps.map((_, index) => (
 						<DotButton

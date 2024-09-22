@@ -1,4 +1,5 @@
 import logo from './icons/logo.svg';
+import beAware from './icons/beAware.svg';
 import spin_throne from './icons/spin_throne.svg';
 
 import twOne from './images/21.webp';
@@ -37,7 +38,22 @@ import scudetto from './images/scudetto.webp';
 import cashback from './images/cashback.webp';
 import hyper_bonus from './images/hyper_bonus.webp';
 
-export { logo, spin_throne, davido };
+import a_ from './icons/a_.png';
+import caf from './icons/caf.png';
+import esl from './icons/esl.png';
+import fcb from './icons/fcb.png';
+import ihc from './icons/ihc.png';
+import mbr from './icons/mbr.png';
+import raja from './icons/raja.png';
+import pfl_ from './icons/pfl_.png';
+import losc_ from './icons/losc_.png';
+import circle from './icons/circle.png';
+import serieA from './icons/serieA.png';
+import assale from './icons/assale.webp';
+import psg_logo from './icons/psg_logo.png';
+import volleyWorld from './icons/volleyWorld.png';
+
+export { logo, spin_throne, beAware };
 export const slides = [
 	{
 		img: davido,
@@ -166,3 +182,4 @@ export const gameImgs = [
 	{ img: tomb, name: 'Mayan Tomb' },
 	{ img: odyssey, name: 'Gems Odyssey' },
 ];
+export const partners = [fcb, psg_logo, caf, volleyWorld, serieA, losc_, pfl_, raja, esl, mbr, ihc, circle, a_, assale,];

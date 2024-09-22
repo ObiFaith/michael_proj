@@ -5,10 +5,16 @@
 :root {
 	--background: 210, 56%, 26%;
 	--foreground: 208, 62%, 40%;
-	--secondary: 	82, 57%, 43%;
+	--secondary: 82, 57%, 43%;
 }
 
 @layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
 	:root {
 		--background: 0 0% 100%;
 		--foreground: 222.2 84% 4.9%;
@@ -36,7 +42,6 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 	}
-
 	.dark {
 		--background: 222.2 84% 4.9%;
 		--foreground: 210 40% 98%;
@@ -65,11 +70,8 @@
 	}
 }
 
-@layer base {
-	* {
-		@apply border-border;
-	}
-	body {
-		@apply bg-background text-foreground;
+@layer utilities {
+	.scroll {
+		@apply overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-track-[transparent] scrollbar-thumb-white/30;
 	}
 }

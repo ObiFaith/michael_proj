@@ -60,3 +60,64 @@ export const footerDropDown = {
 		},
 	],
 };
+
+export const popularEvents = [
+	{
+		name: 'Main',
+		lists: [
+			'Live',
+			'Sport',
+			'Promo Code Store',
+			'Special Offers and Bonuses',
+			'First Deposit Bonus',
+			'Casino',
+			'Live Casino',
+			'Registration',
+			'Toto',
+			'TV Games',
+			'Virtual Sport',
+			'Hunting and Fishing',
+			'1xGames',
+		],
+	},
+	{
+		name: 'Live',
+		lists: ['Football', 'Tennis', 'Basketball', 'Ice Hockey', 'Volleyball'],
+	},
+];
+
+export const footerLinks = [
+	{
+		name: 'Information',
+		items: [
+			'About us',
+			'Terms and Conditions',
+			'Affiliate Program',
+			'B2B',
+			'Become an Agent',
+			'Privacy Policy',
+			'Cookie Policy',
+			'Contact',
+		],
+	},
+	{
+		name: 'Betting',
+		items: ['Sport', 'Multi-LIVE', 'Live', 'Toto'],
+	},
+	{
+		name: 'Games',
+		items: ['Casino', '1xGames', 'Live Casino'],
+	},
+	{
+		name: 'Statistics',
+		items: ['Statistics', 'Results'],
+	},
+	{
+		name: 'Useful Links',
+		items: ['Payment Methods', 'Mobile Version', 'Registration'],
+	},
+	{
+		name: 'Apps',
+		items: ['iOS', 'Andriod'],
+	},
+];

@@ -25,7 +25,7 @@ const App = () => {
 	return (
 		<>
 			<Header />
-			<main
+			<section
 				className={`bg-background overflow-hidden gap-2.5 items-start p-2.5 grid ${
 					isCollapsed
 						? 'grid-cols-[32px_1fr_32px]'
@@ -33,16 +33,16 @@ const App = () => {
 				}`}
 			>
 				<Sidebar />
-				<section className="grid gap-2.5">
+				<div className="grid gap-2.5">
 					<Carousel slides={slides} options={{ loop: true }} />
 					<ImageSlides />
-				</section>
+				</div>
 				<BetInfo
 					isCollapsed={isCollapsed}
 					setCollapsed={setCollapsed}
 				/>
 				<Table />
-			</main>
+			</section>
 			<Footer />
 		</>
 	);
