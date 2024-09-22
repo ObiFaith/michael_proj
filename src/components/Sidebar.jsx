@@ -1,11 +1,13 @@
 import { FaAward } from 'react-icons/fa';
 import { AiFillLike } from 'react-icons/ai';
 import { FaHockeyPuck } from 'react-icons/fa';
+import { GiShuttlecock } from 'react-icons/gi';
+import { IoIosBaseball } from 'react-icons/io';
 import { Gamepad2, Trophy } from 'lucide-react';
 import { FaBaseballBatBall } from 'react-icons/fa6';
 import { IoBasketballSharp } from 'react-icons/io5';
-import { MdSportsVolleyball } from 'react-icons/md';
-import { IoIosAmericanFootball } from "react-icons/io";
+import { FaVolleyballBall } from "react-icons/fa";
+import { IoAmericanFootball } from 'react-icons/io5';
 import { FaTableTennisPaddleBall } from 'react-icons/fa6';
 import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
 
@@ -17,25 +19,33 @@ const Sidebar = () => {
 				<Trophy />
 				<FaAward />
 			</div>
-			<div className="grid gap-0.5">
-				<div className="bg-foreground size-8 rounded-sm flex justify-center items-center">
-					<span className="bg-secondary p-1 rounded-full"></span>
+			<div className="grid">
+				<div className="rounded-t-sm">
+					<div className="bg-foreground size-8 rounded-t-sm flex justify-center items-center">
+						<span className="bg-secondary p-1 rounded-full"></span>
+					</div>
+					<span className="text-xs flex justify-center size-8 items-center tracking-tight font-medium text-foreground bg-blue-50">
+						847
+					</span>
 				</div>
-				<span className="text-xs flex justify-center size-8 items-center rounded-sm tracking-tight font-medium text-foreground bg-blue-50">
-					1142
-				</span>
-				<div className="*:bg-white *:size-8 *:text-foreground *:rounded-sm *:p-1.5 grid gap-0.5">
+				<div className="*:bg-white *:border-b *:border-blue-50 *:size-8 *:text-foreground *:p-1.5">
 					<IoIosFootball />
 					<IoIosTennisball />
 					<IoBasketballSharp />
-					<FaHockeyPuck />
-					<MdSportsVolleyball />
+					<div className="flex items-center justify-center">
+						<FaHockeyPuck />
+					</div>
+					<FaVolleyballBall />
 					<FaTableTennisPaddleBall />
-					<div className="size-8">
+					<div>
 						<FaBaseballBatBall />
 					</div>
 					<Gamepad2 />
-					<IoIosAmericanFootball />
+					<IoAmericanFootball />
+					<div className="rotate-180">
+						<GiShuttlecock className="rotate-45" />
+					</div>
+					<IoIosBaseball className="rotate-90" />
 				</div>
 			</div>
 		</aside>

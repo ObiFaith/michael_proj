@@ -1,9 +1,10 @@
 import { Settings } from 'lucide-react';
 import { useState } from 'react';
+import { Switch } from './ui/switch';
 
 const BetSlip = () => {
 	const [betNo, setBetNo] = useState(500);
-	const [isOneBet] = useState(false);
+	const [isOneBet, setOneBet] = useState(false);
 	return (
 		<div>
 			<div className="px-2.5">
@@ -15,11 +16,11 @@ const BetSlip = () => {
 				</div>
 				<div className="mt-1 mb-2 text-center py-14 px-8 text-base bg-white">
 					{isOneBet ? (
-						<div>
-							<p className="font-medium text-lg">
+						<div className='transition-all font-medium'>
+							<p className="font-bold text-base">
 								One-click bet enabled
 							</p>
-							<p>
+							<p className='text-sm'>
 								A bet with the stake you set below will be
 								placed automatically when you click on a market
 							</p>
@@ -37,7 +38,11 @@ const BetSlip = () => {
 				<>
 					<div className="flex justify-between text-xs">
 						<p className="uppercase">One-click bet</p>
-						<input type="radio" name="one-bet" />
+						<div className="flex items-center space-x-2">
+							<Switch
+								onCheckedChange={checked => setOneBet(checked)}
+							/>
+						</div>
 					</div>
 					{isOneBet && (
 						<div className="px-2 border my-2 border-blue-100 bg-white flex items-center justify-between">

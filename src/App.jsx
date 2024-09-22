@@ -36,12 +36,12 @@ const App = () => {
 				<div className="grid gap-2.5">
 					<Carousel slides={slides} options={{ loop: true }} />
 					<ImageSlides />
+					<Table />
 				</div>
 				<BetInfo
 					isCollapsed={isCollapsed}
 					setCollapsed={setCollapsed}
 				/>
-				<Table />
 			</section>
 			<Footer />
 		</>
