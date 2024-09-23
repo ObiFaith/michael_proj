@@ -16,11 +16,11 @@ const BetSlip = () => {
 				</div>
 				<div className="mt-1 mb-2 text-center py-14 px-8 text-base bg-white">
 					{isOneBet ? (
-						<div className='transition-all font-medium'>
+						<div className="transition-all font-medium">
 							<p className="font-bold text-base">
 								One-click bet enabled
 							</p>
-							<p className='text-sm'>
+							<p className="text-sm">
 								A bet with the stake you set below will be
 								placed automatically when you click on a market
 							</p>
@@ -38,11 +38,9 @@ const BetSlip = () => {
 				<>
 					<div className="flex justify-between text-xs">
 						<p className="uppercase">One-click bet</p>
-						<div className="flex items-center space-x-2">
-							<Switch
-								onCheckedChange={checked => setOneBet(checked)}
-							/>
-						</div>
+						<Switch
+							onCheckedChange={checked => setOneBet(checked)}
+						/>
 					</div>
 					{isOneBet && (
 						<div className="px-2 border my-2 border-blue-100 bg-white flex items-center justify-between">

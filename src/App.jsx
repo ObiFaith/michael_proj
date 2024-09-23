@@ -33,7 +33,7 @@ const App = () => {
 				}`}
 			>
 				<Sidebar />
-				<div className="grid gap-2.5">
+				<div className="grid gap-4">
 					<Carousel slides={slides} options={{ loop: true }} />
 					<ImageSlides />
 					<Table />

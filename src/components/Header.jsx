@@ -75,22 +75,22 @@ const Header = () => {
 					</DropdownMenu>
 				</div>
 				<div className="flex gap-1 md:gap-2">
-					<div className="bg-secondary rounded-sm p-1.5">
+					<div className="bg-secondary rounded-sm p-0.5 sm:p-1 md:p-1.5">
 						<DollarSign size={20} color="white" strokeWidth={2} />
 					</div>
-					<div className="bg-foreground rounded-sm p-1.5">
+					<div className="bg-foreground rounded-sm p-0.5 sm:p-1 md:p-1.5">
 						<Gift size={20} color="white" strokeWidth={2} />
 					</div>
-					<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-1.5">
+					<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-0.5 sm:p-1 md:p-1.5">
 						<Mail size={20} color="white" strokeWidth={2} />
 						<ChevronDown size={18} color="white" />
 					</div>
-					<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-1.5">
+					<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-0.5 sm:p-1 md:p-1.5">
 						<User size={20} color="white" strokeWidth={2} />
 						<ChevronDown size={18} color="white" />
 					</div>
 				</div>
-				<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-1.5">
+				<div className="bg-foreground flex items-center gap-0.5 rounded-sm p-0.5 sm:p-1 md:p-1.5">
 					<Settings size={20} color="white" strokeWidth={2} />
 					<ChevronDown size={18} color="white" />
 				</div>

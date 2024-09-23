@@ -7,7 +7,7 @@ const BetInfo = ({ isCollapsed, setCollapsed }) => {
 		<aside>
 			<div
 				onClick={() => setCollapsed(!isCollapsed)}
-				className="justify-center mb-2.5 cursor-pointer items-center py-2 flex gap-1 rounded-sm hover:text-white text-white/70 hover:bg-foreground bg-blue-400"
+				className="justify-center max-sm:hidden mb-2.5 cursor-pointer items-center py-2 flex gap-1 rounded-sm hover:text-white text-white/70 hover:bg-foreground bg-blue-400"
 			>
 				{isCollapsed ? (
 					<ChevronsLeft size={14} />
