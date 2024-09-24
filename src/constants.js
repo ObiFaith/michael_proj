@@ -7,6 +7,18 @@ export const navLinks = [
 	{ name: 'More' },
 ];
 
+export const matches = [
+	{
+		category: 'Football',
+		heading: 'Mexico. Liga MX',
+		games: [
+			{
+				teams: ['Juarez', 'Tigres de la UANL'],
+			},
+		],
+	},
+];
+
 export const footerDropDown = {
 	name: '1xBet - Licensed betting company in Nigeria - Online and live Sports Betting',
 	data: [

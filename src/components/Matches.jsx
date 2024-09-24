@@ -1,5 +1,12 @@
+import { MatchDetails } from '..';
+
 const Matches = () => {
-	return <div>Matches</div>;
+	return (
+		<div>
+			<div className="bg-blue-100 text-background"></div>
+			<MatchDetails />
+		</div>
+	);
 };
 
 export default Matches;

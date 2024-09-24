@@ -1,4 +1,4 @@
-import { Menu } from 'lucide-react';
+import { ChevronDown, Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 // eslint-disable-next-line react/prop-types
@@ -25,9 +25,12 @@ const Table = ({ config = [], activeTab, setActiveTab, displayTabs, size }) => {
 				<span className="relative transition-all">
 					<span
 						onClick={() => setDropdownOpen(!dropdownOpen)}
-						className={`text-white ${isMenu ? 'hidden' : ''}`}
+						className={`text-white cursor-pointer *:size-5 flex gap-0.5 sm:gap-1 ${
+							isMenu ? 'hidden' : ''
+						}`}
 					>
 						<Menu />
+						<ChevronDown />
 					</span>
 
 					{/* Dropdown for remaining tabs */}
@@ -44,9 +47,10 @@ const Table = ({ config = [], activeTab, setActiveTab, displayTabs, size }) => {
 										}}
 										className={`px-4 py-2 cursor-pointer ${
 											activeTab === size + index
-												? 'bg-secondary text-white'
-												: 'text-black hover:bg-gray-200'
-										}`}
+												? ''
+												: 'hover:bg-gray-200'
+										}
+										${index == 0 ? 'rounded-t-md' : ''}`}
 									>
 										{entry.header}
 									</li>

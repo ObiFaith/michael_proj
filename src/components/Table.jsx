@@ -6,16 +6,10 @@ import { IoSearch } from 'react-icons/io5';
 import { FaHockeyPuck } from 'react-icons/fa';
 import { FaVolleyballBall } from 'react-icons/fa';
 import { IoBasketballSharp } from 'react-icons/io5';
-import { ChevronRight, Menu, Trophy } from 'lucide-react';
 import { FaTableTennisPaddleBall } from 'react-icons/fa6';
 import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
-import {
-	FirstPeriod,
-	Matches,
-	Recommended,
-	SecondPeriod,
-	UpcomingEvents,
-} from '..';
+import { ChevronDown, ChevronRight, Gamepad2, Menu, Trophy } from 'lucide-react';
+import { FirstPeriod, Matches, Recommended, SecondPeriod, UpcomingEvents } from '..';
 
 // eslint-disable-next-line react/prop-types
 const Table = ({ isCollapsed }) => {
@@ -23,7 +17,6 @@ const Table = ({ isCollapsed }) => {
 	const [limit, setLimit] = useState(size);
 	const [activeTab, setActiveTab] = useState(0);
 	const [dropdownOpen, setDropdownOpen] = useState(false);
-
 	const config = [
 		{ header: 'Matches', component: <Matches /> },
 		{ header: 'Recommended', component: <Recommended /> },
@@ -31,7 +24,6 @@ const Table = ({ isCollapsed }) => {
 		{ header: '1st Period', component: <FirstPeriod /> },
 		{ header: '2nd Period', component: <SecondPeriod /> },
 	];
-
 	const games = [
 		{ name: 'Football', icons: <IoIosFootball size={16} /> },
 		{ name: 'Tennis', icons: <IoIosTennisball size={16} /> },
@@ -40,19 +32,17 @@ const Table = ({ isCollapsed }) => {
 		{ name: 'Volleyball', icons: <FaVolleyballBall size={16} /> },
 		{ name: 'Table Tennis', icons: <IoBasketballSharp size={16} /> },
 	];
-
 	const displayTabs = () => {
 		if (window.innerWidth >= 480 && window.innerWidth < 700) setSize(1);
 		else if (window.innerWidth >= 700 && window.innerWidth < 900)
 			setSize(isCollapsed ? 2 : 1);
-		else if (window.innerWidth >= 900 && window.innerWidth < 1000)
+		else if (window.innerWidth >= 900 && window.innerWidth < 1010)
 			setSize(isCollapsed ? 3 : 2);
-		else if (window.innerWidth >= 1000 && window.innerWidth < 1100)
+		else if (window.innerWidth >= 1010 && window.innerWidth < 1160)
 			setSize(isCollapsed ? 4 : 3);
-		else if (window.innerWidth >= 1150) setSize(5);
+		else if (window.innerWidth >= 1160) setSize(5);
 		setLimit(isCollapsed ? size + 2 : size + 1);
 	};
-
 	return (
 		<div className="transition-all">
 			<div className="flex px-2.5 items-center gap-6 sm:gap-8 sm:justify-between bg-foreground">
@@ -82,51 +72,69 @@ const Table = ({ isCollapsed }) => {
 				</div>
 			</div>
 			<div className="bg-blue-400 flex items-center px-2.5 text-white text-xs md:text-sm">
-				<div className="border-r py-2.5 pr-2.5 mr-2.5 items-center flex gap-1 border-background">
+				<div className="border-r sm:min-w-40 py-2.5 pr-2.5 mr-2.5 sm:items-center flex gap-1 border-background">
 					<Switch />
-					<p>With live streams</p>
+					<p className="max-sm:hidden">With live streams</p>
 				</div>
-				<div className="flex gap-4">
-					{games.slice(0, limit).map((game, index) => (
-						<div key={index} className="flex items-center gap-2">
-							{game.icons}
-							<p>{game.name}</p>
-						</div>
-					))}
-					{/* Menu icon for small screens */}
-					<span className="relative transition-all">
-						<span
-							onClick={() => setDropdownOpen(!dropdownOpen)}
-							className={`text-white ${
-								limit == games.length ? 'hidden' : ''
-							}`}
-						>
-							<Menu />
-						</span>
-
-						{/* Dropdown for remaining tabs */}
-						{dropdownOpen && (
-							<div className="absolute z-10 right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
-								<ul className="flex flex-col">
-									{games.slice(limit).map((game, index) => (
-										// Show all tabs in the dropdown except the already visible ones
-										<li
-											key={index}
-											onClick={() =>
-												setDropdownOpen(false)
-											}
-											className="px-4 py-2 cursor-pointer text-blue-400"
-										>
-											{game.name}
-										</li>
-									))}
-								</ul>
+				<div className="flex sm:justify-between w-full">
+					<div className="flex gap-4">
+						{games.slice(0, limit).map((game, index) => (
+							<div
+								key={index}
+								className="flex cursor-pointer items-center gap-2"
+							>
+								{game.icons}
+								<p>{game.name}</p>
 							</div>
-						)}
-					</span>
+						))}
+						{/* Menu icon for small screens */}
+						<span className="relative transition-all">
+							<span className="flex items-center gap-2.5">
+								<span
+									onClick={() =>
+										setDropdownOpen(!dropdownOpen)
+									}
+									className={`text-white cursor-pointer *:size-5 flex gap-0.5 sm:gap-1 ${
+										limit == games.length ? 'hidden' : ''
+									}`}
+								>
+									<Menu />
+									<ChevronDown />
+								</span>
+								<span className="border-x px-1.5 sm:px-5">
+									<Gamepad2 size={20} />
+								</span>
+							</span>
+
+							{/* Dropdown for remaining tabs */}
+							{dropdownOpen && (
+								<div className="absolute z-10 right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
+									<ul className="flex flex-col">
+										{games
+											.slice(limit)
+											.map((game, index) => (
+												// Show all tabs in the dropdown except the already visible ones
+												<li
+													key={index}
+													onClick={() =>
+														setDropdownOpen(false)
+													}
+													className="px-4 py-2 font-bold cursor-pointer text-blue-400"
+												>
+													{game.name}
+												</li>
+											))}
+									</ul>
+								</div>
+							)}
+						</span>
+					</div>
 				</div>
 			</div>
-			<div className="pb-32">{config[activeTab].component}</div>
+			<div className="pb-32">
+				{/* {config[activeTab].component} */}
+				<Matches />
+			</div>
 		</div>
 	);
 };
