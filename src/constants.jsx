@@ -1,3 +1,8 @@
+import { FaHockeyPuck } from 'react-icons/fa';
+import { FaVolleyballBall } from 'react-icons/fa';
+import { IoBasketballSharp } from 'react-icons/io5';
+import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
+
 export const navLinks = [
 	{ name: 'Sports' },
 	{ name: 'Live' },
@@ -5,6 +10,15 @@ export const navLinks = [
 	{ name: 'Casino' },
 	{ name: 'Live Casino' },
 	{ name: 'More' },
+];
+
+export const games = [
+	{ name: 'Football', icons: <IoIosFootball size={16} /> },
+	{ name: 'Tennis', icons: <IoIosTennisball size={16} /> },
+	{ name: 'Basketball', icons: <IoBasketballSharp size={16} /> },
+	{ name: 'Ice Hockey', icons: <FaHockeyPuck size={16} /> },
+	{ name: 'Volleyball', icons: <FaVolleyballBall size={16} /> },
+	{ name: 'Table Tennis', icons: <IoBasketballSharp size={16} /> },
 ];
 
 export const footerDropDown = {

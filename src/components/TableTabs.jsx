@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 // eslint-disable-next-line react/prop-types
 const Table = ({ config = [], activeTab, setActiveTab, displayTabs, size }) => {
 	const [isMenu, setMenu] = useState(true);
-
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 
 	useEffect(() => {
@@ -16,8 +15,8 @@ const Table = ({ config = [], activeTab, setActiveTab, displayTabs, size }) => {
 	}, [displayTabs]);
 
 	useEffect(() => {
-		setMenu(size == 5);
-	}, [size]);
+		setMenu(size == config.length);
+	}, [size, config]);
 
 	return (
 		<div>
