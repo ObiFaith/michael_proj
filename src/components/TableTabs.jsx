@@ -20,9 +20,9 @@ const Table = ({ config = [], activeTab, setActiveTab, displayTabs, size }) => {
 
 	return (
 		<div>
-			<div className="flex relative items-center gap-2 w-full justify-between px-2">
+			<div className="flex items-center gap-2 w-full justify-between px-2">
 				{/* Menu icon for small screens */}
-				<span className="relative">
+				<span className="relative transition-all">
 					<span
 						onClick={() => setDropdownOpen(!dropdownOpen)}
 						className={`text-white ${isMenu ? 'hidden' : ''}`}

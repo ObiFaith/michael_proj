@@ -16,9 +16,7 @@ import Recommended from './components/Recommended';
 import ImageSlides from './components/ImageSlides';
 import FirstPeriod from './components/FirstPeriod';
 import SecondPeriod from './components/SecondPeriod';
-import MenuDropdown from './components/MenuDropdown';
 import UpcomingEvents from './components/UpcomingEvents';
 
-export { Header, Carousel, Navbar, BetInfo, ImageSlides, Sidebar, Tabs, Bets, BetSlip, Open,
-  History, Footer, MenuDropdown, Table, TableTabs, Matches, Recommended, UpcomingEvents,
-  FirstPeriod, SecondPeriod };
+export { Header, Carousel, Navbar, BetInfo, ImageSlides, Sidebar, Tabs, Bets, BetSlip, TableTabs,
+  History, Footer, Table, Open, Matches, Recommended, UpcomingEvents, FirstPeriod, SecondPeriod };
