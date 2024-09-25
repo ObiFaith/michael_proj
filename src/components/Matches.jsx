@@ -5,6 +5,8 @@ const Matches = () => {
 		<div>
 			<div className="bg-blue-100 text-background"></div>
 			<MatchDetails />
+			<MatchDetails />
+			<MatchDetails />
 		</div>
 	);
 };
