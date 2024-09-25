@@ -1,3 +1,5 @@
+import { antlers, kobe } from './assets';
+
 export const navLinks = [
 	{ name: 'Sports' },
 	{ name: 'Live' },
@@ -10,12 +12,16 @@ export const navLinks = [
 export const matches = [
 	{
 		category: 'Football',
-		heading: 'Mexico. Liga MX',
+		heading: 'Japan. Emperors Cup',
 		games: [
 			{
-				teams: ['Juarez', 'Tigres de la UANL'],
+				teams: [
+					{ name: 'Yokohama F. Marinos', logo: antlers, score: 0 },
+					{ name: 'Tigres de la UANL', logo: kobe, score: 0 },
+				],
 			},
 		],
+		extra_info: ['08:14', '1st half', 'Round of 8'],
 	},
 ];
 

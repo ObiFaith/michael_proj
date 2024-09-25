@@ -22,6 +22,7 @@ import scratch_card from './images/scratch_card.webp';
 import jet from './images/jet.webp';
 import pfl from './images/pfl.webp';
 import psg from './images/psg.webp';
+import kobe from './icons/kobe.webp';
 import losc from './images/losc.webp';
 import girl from './images/girl.webp';
 import money from './images/money.webp';
@@ -30,6 +31,7 @@ import barca from './images/barca.webp';
 import bonus from './images/bonus.webp';
 import casino from './images/casino.webp';
 import davido from './images/davido.webp';
+import antlers from './icons/antlers.webp';
 import jackpot from './images/jackpot.webp';
 import no_risk from './images/no_risk.webp';
 import free_bet from './images/free_bet.webp';
@@ -46,14 +48,16 @@ import ihc from './icons/ihc.png';
 import mbr from './icons/mbr.png';
 import raja from './icons/raja.png';
 import pfl_ from './icons/pfl_.png';
+import como from './icons/como.webp';
 import losc_ from './icons/losc_.png';
 import circle from './icons/circle.png';
 import serieA from './icons/serieA.png';
 import assale from './icons/assale.webp';
+import atlanta from './icons/atlanta.webp';
 import psg_logo from './icons/psg_logo.png';
 import volleyWorld from './icons/volleyWorld.png';
 
-export { logo, spin_throne, beAware };
+export { logo, spin_throne, beAware, como, atlanta, kobe, antlers };
 export const slides = [
 	{
 		img: davido,

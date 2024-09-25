@@ -1,15 +1,11 @@
-import { TableTabs } from '..';
 import { useState } from 'react';
 import { Switch } from './ui/switch';
-import { FaHome } from 'react-icons/fa';
-import { IoSearch } from 'react-icons/io5';
-import { FaHockeyPuck } from 'react-icons/fa';
-import { FaVolleyballBall } from 'react-icons/fa';
-import { IoBasketballSharp } from 'react-icons/io5';
 import { FaTableTennisPaddleBall } from 'react-icons/fa6';
+import { IoSearch, IoBasketballSharp } from 'react-icons/io5';
 import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
+import { FaHome, FaHockeyPuck, FaVolleyballBall } from 'react-icons/fa';
 import { ChevronDown, ChevronRight, Gamepad2, Menu, Trophy } from 'lucide-react';
-import { FirstPeriod, Matches, Recommended, SecondPeriod, UpcomingEvents } from '..';
+import { TableTabs, FirstPeriod, Matches, Recommended, SecondPeriod, UpcomingEvents } from '..';
 
 // eslint-disable-next-line react/prop-types
 const Table = ({ isCollapsed }) => {

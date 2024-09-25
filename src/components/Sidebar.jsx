@@ -1,15 +1,10 @@
-import { FaAward } from 'react-icons/fa';
 import { AiFillLike } from 'react-icons/ai';
-import { FaHockeyPuck } from 'react-icons/fa';
 import { GiShuttlecock } from 'react-icons/gi';
-import { IoIosBaseball } from 'react-icons/io';
 import { Gamepad2, Trophy } from 'lucide-react';
-import { FaVolleyballBall } from "react-icons/fa";
-import { FaBaseballBatBall } from 'react-icons/fa6';
-import { IoBasketballSharp } from 'react-icons/io5';
-import { IoAmericanFootball } from 'react-icons/io5';
-import { FaTableTennisPaddleBall } from 'react-icons/fa6';
-import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
+import { FaHockeyPuck, FaAward, FaVolleyballBall } from 'react-icons/fa';
+import { IoBasketballSharp, IoAmericanFootball } from 'react-icons/io5';
+import { FaBaseballBatBall, FaTableTennisPaddleBall } from 'react-icons/fa6';
+import { IoIosFootball, IoIosBaseball, IoIosTennisball } from 'react-icons/io';
 
 const Sidebar = () => {
 	return (
