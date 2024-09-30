@@ -111,7 +111,9 @@ const Footer = () => {
 				))}
 			</div>
 			<div className="p-4 bg-blue-400 overflow-x-hidden">
-				<h3 className="text-sm uppercase font-medium pb-2.5">Partners</h3>
+				<h3 className="text-sm uppercase font-medium pb-2.5">
+					Partners
+				</h3>
 				<div className="flex pb-2.5 gap-3 scroll">
 					{partners.map((partner, index) => (
 						<div

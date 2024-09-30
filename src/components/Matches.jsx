@@ -1,12 +1,18 @@
-import { MatchDetails } from '..';
+import { matches } from '@/constants';
+import { MatchDetails, MatchHeading } from '..';
 
 const Matches = () => {
 	return (
 		<div>
-			<div className="bg-blue-100 text-background"></div>
-			<MatchDetails />
-			<MatchDetails />
-			<MatchDetails />
+			{matches.map(match => (
+				<div key={match}>
+					<MatchHeading
+						heading={match.heading}
+						category={match.category}
+					/>
+					<MatchDetails games={match.games} />
+				</div>
+			))}
 		</div>
 	);
 };

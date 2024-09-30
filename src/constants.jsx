@@ -1,4 +1,7 @@
 import { antlers, kobe } from './assets';
+import { IoBasketballSharp } from 'react-icons/io5';
+import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
+import { FaHockeyPuck, FaVolleyballBall } from 'react-icons/fa';
 
 export const navLinks = [
 	{ name: 'Sports' },
@@ -9,19 +12,70 @@ export const navLinks = [
 	{ name: 'More' },
 ];
 
+export const games = [
+	{ name: 'Football', icons: <IoIosFootball /> },
+	{ name: 'Tennis', icons: <IoIosTennisball /> },
+	{ name: 'Basketball', icons: <IoBasketballSharp /> },
+	{ name: 'Ice Hockey', icons: <FaHockeyPuck /> },
+	{ name: 'Volleyball', icons: <FaVolleyballBall /> },
+	{ name: 'Table Tennis', icons: <IoBasketballSharp /> },
+];
+
 export const matches = [
 	{
+		id: 1,
 		category: 'Football',
 		heading: 'Japan. Emperors Cup',
 		games: [
 			{
 				teams: [
-					{ name: 'Yokohama F. Marinos', logo: antlers, score: 0 },
-					{ name: 'Tigres de la UANL', logo: kobe, score: 0 },
+					{
+						name: 'Yokohama F. Marinos',
+						logo: antlers,
+						score: { first_half: 1, second_half: 2 },
+					},
+					{
+						name: 'Tigres de la UANL',
+						logo: kobe,
+						score: { first_half: 1, second_half: 2 },
+					},
 				],
+				points: {
+					1: 1.35,
+					X: 5.48,
+					2: 7.74,
+					'1X': 1.09,
+					12: 1.15,
+					'2X': 3.17,
+					'+5': '+811',
+				},
+				extra_info: ['08:14', '1st half', 'Round of 8'],
+			},
+			{
+				teams: [
+					{
+						name: 'Yokohama F. Marinos',
+						logo: antlers,
+						score: { first_half: 1, second_half: 2 },
+					},
+					{
+						name: 'Tigres de la UANL',
+						logo: kobe,
+						score: { first_half: 1, second_half: 2 },
+					},
+				],
+				points: {
+					1: 1.35,
+					X: '5.48',
+					2: '7.74',
+					'1X': '1.09',
+					12: '1.15',
+					'2X': '3.17',
+					'+5': '+811',
+				},
+				extra_info: ['08:14', '1st half', 'Round of 8'],
 			},
 		],
-		extra_info: ['08:14', '1st half', 'Round of 8'],
 	},
 ];
 

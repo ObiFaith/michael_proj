@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import { games } from '@/constants';
 import { Switch } from './ui/switch';
+import { FaHome } from 'react-icons/fa';
+import { IoSearch } from 'react-icons/io5';
 import { FaTableTennisPaddleBall } from 'react-icons/fa6';
-import { IoSearch, IoBasketballSharp } from 'react-icons/io5';
-import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
-import { FaHome, FaHockeyPuck, FaVolleyballBall } from 'react-icons/fa';
 import { ChevronDown, ChevronRight, Gamepad2, Menu, Trophy } from 'lucide-react';
 import { TableTabs, FirstPeriod, Matches, Recommended, SecondPeriod, UpcomingEvents } from '..';
 
@@ -19,14 +19,6 @@ const Table = ({ isCollapsed }) => {
 		{ header: 'Upcoming events', component: <UpcomingEvents /> },
 		{ header: '1st Period', component: <FirstPeriod /> },
 		{ header: '2nd Period', component: <SecondPeriod /> },
-	];
-	const games = [
-		{ name: 'Football', icons: <IoIosFootball size={16} /> },
-		{ name: 'Tennis', icons: <IoIosTennisball size={16} /> },
-		{ name: 'Basketball', icons: <IoBasketballSharp size={16} /> },
-		{ name: 'Ice Hockey', icons: <FaHockeyPuck size={16} /> },
-		{ name: 'Volleyball', icons: <FaVolleyballBall size={16} /> },
-		{ name: 'Table Tennis', icons: <IoBasketballSharp size={16} /> },
 	];
 	const displayTabs = () => {
 		if (window.innerWidth >= 480 && window.innerWidth < 700) setSize(1);
