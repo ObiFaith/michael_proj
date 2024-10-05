@@ -8,7 +8,7 @@ const MatchDetails = ({ games = [] }) => {
 				<div key={game} className="flex">
 					<div className="w-2/5">
 						<div className="flex py-2">
-							<div className="pr-2 pl-4 grid gap-1 border-r border-gray-300">
+							<div className="pr-2 pl-2.5 grid gap-1 border-r border-gray-300">
 								<svg
 									role="img"
 									focusable="false"
@@ -19,7 +19,7 @@ const MatchDetails = ({ games = [] }) => {
 								</svg>
 								<Star size={16} className="text-accent" />
 							</div>
-							<div className="flex justify-between w-full text-sm">
+							<div className="flex justify-between w-full">
 								<div className="grid gap-1 ml-2">
 									{game.teams.map((team, index) => (
 										<div
@@ -30,11 +30,13 @@ const MatchDetails = ({ games = [] }) => {
 												src={team.logo}
 												alt={team.name + ' logo'}
 											/>
-											<h3>{team.name}</h3>
+											<h3 className="max-sm:hidden text-xs md:text-sm">
+												{team.name}
+											</h3>
 										</div>
 									))}
 								</div>
-								<div className="flex">
+								<div className="flex text-sm">
 									<div className="font-bold pr-2 grid gap-1 border-r border-gray-300">
 										<p>{game.teams[0].score.first_half}</p>
 										<p>{game.teams[1].score.first_half}</p>
@@ -46,8 +48,8 @@ const MatchDetails = ({ games = [] }) => {
 								</div>
 							</div>
 						</div>
-						<div className="flex pl-4 pr-2 justify-between">
-							<div className="text-xs flex gap-1">
+						<div className="flex pl-2.5 pr-2 justify-between">
+							<div className="text-xs flex flex-wrap gap-x-1">
 								{game.extra_info.map((info, index) => (
 									<p key={info}>
 										{info}{' '}
@@ -56,7 +58,7 @@ const MatchDetails = ({ games = [] }) => {
 									</p>
 								))}
 							</div>
-							<ChevronDown size={20} strokeWidth={2.5} />
+							<ChevronDown size={20} strokeWidth={2} />
 						</div>
 					</div>
 					<hr />

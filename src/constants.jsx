@@ -13,12 +13,12 @@ export const navLinks = [
 ];
 
 export const games = [
-	{ name: 'Football', icons: <IoIosFootball /> },
-	{ name: 'Tennis', icons: <IoIosTennisball /> },
-	{ name: 'Basketball', icons: <IoBasketballSharp /> },
-	{ name: 'Ice Hockey', icons: <FaHockeyPuck /> },
-	{ name: 'Volleyball', icons: <FaVolleyballBall /> },
-	{ name: 'Table Tennis', icons: <IoBasketballSharp /> },
+	{ name: 'Football', icons: <IoIosFootball size={16} /> },
+	{ name: 'Tennis', icons: <IoIosTennisball size={16} /> },
+	{ name: 'Basketball', icons: <IoBasketballSharp size={16} /> },
+	{ name: 'Ice Hockey', icons: <FaHockeyPuck size={16} /> },
+	{ name: 'Volleyball', icons: <FaVolleyballBall size={16} /> },
+	{ name: 'Table Tennis', icons: <IoBasketballSharp size={16} /> },
 ];
 
 export const matches = [

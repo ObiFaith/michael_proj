@@ -45,7 +45,7 @@ const Carousel = ({ slides = [], options }) => {
 							className="embla__slide bg-no-repeat bg-cover bg-center md:bg-right-bottom min-h-[15.5rem]"
 							key={index}
 						>
-							<div className="py-6 lg:bg-[#000]/25 sm:bg-[#000]/50 max-sm:bg-[#000]/70 grid items-center h-full">
+							<div className="py-6 lg:bg-[#000]/35 bg-[#000]/65 grid items-center h-full">
 								<div className="min-w-full grid gap-2 *:pl-10 md:*:max-w-[500px] pb-3 ms-auto">
 									<h1 className="uppercase text-2xl sm:text-3xl font-bold md:text-4xl">
 										{slide.heading}

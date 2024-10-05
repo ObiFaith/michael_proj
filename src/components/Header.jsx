@@ -19,7 +19,7 @@ import { Navbar } from '..';
 
 const Header = () => {
 	return (
-		<header className="flex gap-5 items-center font-roboto bg-blue-400 p-2.5 pt-2 overflow-x-hidden">
+		<header className="flex gap-5 items-center font-roboto bg-blue-400 p-2 pb-2.5 overflow-x-hidden">
 			<div className="flex gap-4 items-center w-full">
 				<div className="w-24 self-end">
 					<img src={logo} alt="logo" />

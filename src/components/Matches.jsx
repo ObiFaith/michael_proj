@@ -3,7 +3,7 @@ import { MatchDetails, MatchHeading } from '..';
 
 const Matches = () => {
 	return (
-		<div>
+		<>
 			{matches.map(match => (
 				<div key={match}>
 					<MatchHeading
@@ -13,7 +13,7 @@ const Matches = () => {
 					<MatchDetails games={match.games} />
 				</div>
 			))}
-		</div>
+		</>
 	);
 };
 

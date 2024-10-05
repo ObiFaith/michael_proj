@@ -26,7 +26,7 @@ const App = () => {
 		<>
 			<Header />
 			<section
-				className={`bg-background overflow-hidden gap-2.5 items-start p-2.5 grid ${
+				className={`bg-background overflow-hidden gap-1.5 sm:gap-2.5 items-start px-2 py-2.5 grid ${
 					isCollapsed
 						? 'grid-cols-[32px_1fr_32px]'
 						: 'grid-cols-[32px_1fr_250px] lg:grid-cols-[32px_7fr_2fr]'

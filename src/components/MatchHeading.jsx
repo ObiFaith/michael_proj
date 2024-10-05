@@ -4,7 +4,7 @@ import { games } from '@/constants';
 const MatchHeading = ({ category, heading }) => {
 	return (
 		<div className="bg-blue-200 py-4 flex text-background">
-			<div className="w-2/5 px-4">
+			<div className="w-2/5 px-2.5">
 				{games.map(game => game.name === category && game.icons)}
 			</div>
 			<div className="w-3/5"></div>

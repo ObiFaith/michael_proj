@@ -4,12 +4,25 @@ import { Switch } from './ui/switch';
 import { FaHome } from 'react-icons/fa';
 import { IoSearch } from 'react-icons/io5';
 import { FaTableTennisPaddleBall } from 'react-icons/fa6';
-import { ChevronDown, ChevronRight, Gamepad2, Menu, Trophy } from 'lucide-react';
-import { TableTabs, FirstPeriod, Matches, Recommended, SecondPeriod, UpcomingEvents } from '..';
+import {
+	ChevronDown,
+	ChevronRight,
+	Gamepad2,
+	Menu,
+	Trophy,
+} from 'lucide-react';
+import {
+	TableTabs,
+	FirstPeriod,
+	Matches,
+	Recommended,
+	SecondPeriod,
+	UpcomingEvents,
+} from '..';
 
 // eslint-disable-next-line react/prop-types
 const Table = ({ isCollapsed }) => {
-	const [size, setSize] = useState(0);
+	const [size, setSize] = useState(1);
 	const [limit, setLimit] = useState(size);
 	const [activeTab, setActiveTab] = useState(0);
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,15 +34,18 @@ const Table = ({ isCollapsed }) => {
 		{ header: '2nd Period', component: <SecondPeriod /> },
 	];
 	const displayTabs = () => {
-		if (window.innerWidth >= 480 && window.innerWidth < 700) setSize(1);
-		else if (window.innerWidth >= 700 && window.innerWidth < 900)
+		if (window.innerWidth >= 540 && window.innerWidth < 768) setSize(2);
+		else if (window.innerWidth >= 768 && window.innerWidth < 900)
 			setSize(isCollapsed ? 2 : 1);
-		else if (window.innerWidth >= 900 && window.innerWidth < 1010)
+		else if (window.innerWidth >= 900 && window.innerWidth < 1020)
 			setSize(isCollapsed ? 3 : 2);
-		else if (window.innerWidth >= 1010 && window.innerWidth < 1160)
+		else if (window.innerWidth >= 1020 && window.innerWidth < 1160)
 			setSize(isCollapsed ? 4 : 3);
 		else if (window.innerWidth >= 1160) setSize(5);
-		setLimit(isCollapsed ? size + 2 : size + 1);
+
+		if (window.innerWidth >= 768)
+			setLimit(isCollapsed ? size + 2 : size + 1);
+		else setLimit(size + 1);
 	};
 	return (
 		<div className="transition-all">
@@ -65,7 +81,7 @@ const Table = ({ isCollapsed }) => {
 					<p className="max-sm:hidden">With live streams</p>
 				</div>
 				<div className="flex sm:justify-between w-full">
-					<div className="flex gap-4">
+					<div className="flex gap-4 items-center">
 						{games.slice(0, limit).map((game, index) => (
 							<div
 								key={index}
@@ -119,7 +135,7 @@ const Table = ({ isCollapsed }) => {
 					</div>
 				</div>
 			</div>
-			<div className="pb-32">
+			<div>
 				{/* {config[activeTab].component} */}
 				<Matches />
 			</div>

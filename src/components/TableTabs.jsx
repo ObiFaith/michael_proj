@@ -59,7 +59,7 @@ const TableTabs = ({ config = [], activeTab, setActiveTab, displayTabs, size }) 
 				)}
 			</span>
 			{/* Tabs displayed progressively based on screen size */}
-			<div className="flex items-center flex-wrap gap-3 text-sm">
+			<div className="flex items-center gap-3 text-sm">
 				{config.slice(0, size).map((entry, index) => (
 					<div
 						key={index}
