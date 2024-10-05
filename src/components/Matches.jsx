@@ -1,16 +1,17 @@
 import { matches } from '@/constants';
 import { MatchDetails, MatchHeading } from '..';
 
-const Matches = () => {
+// eslint-disable-next-line react/prop-types
+const Matches = ({ isCollapsed }) => {
 	return (
 		<>
 			{matches.map(match => (
 				<div key={match}>
-					<MatchHeading
-						heading={match.heading}
-						category={match.category}
+					<MatchHeading {...match} />
+					<MatchDetails
+						games={match.games}
+						isCollapsed={isCollapsed}
 					/>
-					<MatchDetails games={match.games} />
 				</div>
 			))}
 		</>

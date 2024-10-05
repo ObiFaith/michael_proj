@@ -1,4 +1,4 @@
-import { antlers, kobe } from './assets';
+import { antlers, japanese, kobe } from './assets';
 import { IoBasketballSharp } from 'react-icons/io5';
 import { IoIosFootball, IoIosTennisball } from 'react-icons/io';
 import { FaHockeyPuck, FaVolleyballBall } from 'react-icons/fa';
@@ -12,7 +12,7 @@ export const navLinks = [
 	{ name: 'More' },
 ];
 
-export const games = [
+export const gameIcons = [
 	{ name: 'Football', icons: <IoIosFootball size={16} /> },
 	{ name: 'Tennis', icons: <IoIosTennisball size={16} /> },
 	{ name: 'Basketball', icons: <IoBasketballSharp size={16} /> },
@@ -24,8 +24,10 @@ export const games = [
 export const matches = [
 	{
 		id: 1,
+		image: japanese,
 		category: 'Football',
 		heading: 'Japan. Emperors Cup',
+		point_labels: [1, 'X', 2, '1X', 12, '2X', '+5'],
 		games: [
 			{
 				teams: [

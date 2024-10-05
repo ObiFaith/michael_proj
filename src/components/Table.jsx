@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { games } from '@/constants';
+import { gameIcons } from '@/constants';
 import { Switch } from './ui/switch';
 import { FaHome } from 'react-icons/fa';
 import { IoSearch } from 'react-icons/io5';
@@ -75,14 +75,14 @@ const Table = ({ isCollapsed }) => {
 					<IoSearch className="text-white absolute right-2 top-2.5" />
 				</div>
 			</div>
-			<div className="bg-blue-400 flex items-center px-2.5 text-white text-xs md:text-sm">
-				<div className="border-r sm:min-w-40 py-2.5 pr-2.5 mr-2.5 sm:items-center flex gap-1 border-background">
+			<div className="bg-blue-400 flex items-center px-2.5 text-xs md:text-sm">
+				<div className="border-r sm:min-w-40 py-2.5 pr-2.5 mr-2.5 sm:items-center flex gap-1 border-background text-white">
 					<Switch />
 					<p className="max-sm:hidden">With live streams</p>
 				</div>
-				<div className="flex sm:justify-between w-full">
+				<div className="flex sm:justify-between w-full text-white/70">
 					<div className="flex gap-4 items-center">
-						{games.slice(0, limit).map((game, index) => (
+						{gameIcons.slice(0, limit).map((game, index) => (
 							<div
 								key={index}
 								className="flex cursor-pointer items-center gap-2"
@@ -99,7 +99,9 @@ const Table = ({ isCollapsed }) => {
 										setDropdownOpen(!dropdownOpen)
 									}
 									className={`text-white cursor-pointer *:size-5 flex gap-0.5 sm:gap-1 ${
-										limit == games.length ? 'hidden' : ''
+										limit == gameIcons.length
+											? 'hidden'
+											: ''
 									}`}
 								>
 									<Menu />
@@ -114,7 +116,7 @@ const Table = ({ isCollapsed }) => {
 							{dropdownOpen && (
 								<div className="absolute z-10 right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
 									<ul className="flex flex-col">
-										{games
+										{gameIcons
 											.slice(limit)
 											.map((game, index) => (
 												// Show all tabs in the dropdown except the already visible ones
@@ -137,7 +139,7 @@ const Table = ({ isCollapsed }) => {
 			</div>
 			<div>
 				{/* {config[activeTab].component} */}
-				<Matches />
+				<Matches isCollapsed={isCollapsed} />
 			</div>
 		</div>
 	);

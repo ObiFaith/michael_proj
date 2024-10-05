@@ -1,12 +1,12 @@
 import { ChevronDown, Star } from 'lucide-react';
 
 // eslint-disable-next-line react/prop-types
-const MatchDetails = ({ games = [] }) => {
+const MatchDetails = ({ games = [], isCollapsed }) => {
 	return (
 		<div className="grid bg-white">
 			{games.map(game => (
 				<div key={game} className="flex">
-					<div className="w-2/5">
+					<div className="md:w-2/5 w-1/3">
 						<div className="flex py-2">
 							<div className="pr-2 pl-2.5 grid gap-1 border-r border-gray-300">
 								<svg
@@ -30,7 +30,13 @@ const MatchDetails = ({ games = [] }) => {
 												src={team.logo}
 												alt={team.name + ' logo'}
 											/>
-											<h3 className="max-sm:hidden text-xs md:text-sm">
+											<h3
+												className={`text-xs md:text-sm ${
+													isCollapsed
+														? 'max-sm:hidden'
+														: ''
+												}`}
+											>
 												{team.name}
 											</h3>
 										</div>
@@ -62,33 +68,33 @@ const MatchDetails = ({ games = [] }) => {
 						</div>
 					</div>
 					<hr />
-					<div className="grid *:pb-2 w-3/5 *:flex max-md:*:justify-evenly md:*:justify-center md:*:gap-2 *:items-center grid-cols-5 *:border-l border-gray-300">
-						<div className="col-span-2">
+					<div className="grid *:pb-2 w-2/3 md:w-3/5 *:flex *:gap-2 text-center *:items-center grid-cols-5 *:border-l border-gray-300">
+						<div className="col-span-2 px-2.5 *:w-full">
 							{Object.values(game.points)
 								.slice(0, 3)
 								.map(point => (
 									<p
 										key={point}
-										className="bg-blue-50 text-blue-400 py-1 px-[1svw] rounded-sm"
+										className="bg-blue-50 text-blue-400 py-1 rounded-sm"
 									>
 										{point}
 									</p>
 								))}
 						</div>
-						<div className="col-span-2">
+						<div className="col-span-2 px-2.5 *:w-full">
 							{Object.values(game.points)
 								.slice(3, 6)
 								.map(point => (
 									<p
 										key={point}
-										className="bg-blue-50 text-blue-400 py-1 px-[1svw] rounded-sm"
+										className="bg-blue-50 text-blue-400 py-1 rounded-sm"
 									>
 										{point}
 									</p>
 								))}
 						</div>
-						<div className="col-span-1">
-							<p className="font-medium underline underline-offset-1 text-blue-400 py-1 px-[1svw]">
+						<div className="col-span-1 justify-center">
+							<p className="font-medium underline underline-offset-1 text-blue-400 py-1">
 								{Object.values(game.points).pop()}
 							</p>
 						</div>

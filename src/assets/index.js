@@ -1,5 +1,6 @@
 import logo from './icons/logo.svg';
 import beAware from './icons/beAware.svg';
+import japanese from './icons/japanese.svg';
 import spin_throne from './icons/spin_throne.svg';
 
 import twOne from './images/21.webp';
@@ -57,7 +58,7 @@ import atlanta from './icons/atlanta.webp';
 import psg_logo from './icons/psg_logo.png';
 import volleyWorld from './icons/volleyWorld.png';
 
-export { logo, spin_throne, beAware, como, atlanta, kobe, antlers };
+export { logo, spin_throne, beAware, como, atlanta, kobe, antlers, japanese };
 export const slides = [
 	{
 		img: davido,
