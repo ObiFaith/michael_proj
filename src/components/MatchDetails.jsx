@@ -68,8 +68,8 @@ const MatchDetails = ({ games = [], isCollapsed }) => {
 						</div>
 					</div>
 					<hr />
-					<div className="grid *:pb-2 w-2/3 md:w-3/5 *:flex *:gap-2 text-center *:items-center grid-cols-5 *:border-l border-gray-300">
-						<div className="col-span-2 px-2.5 *:w-full">
+					<div className="grid *:pb-2 w-2/3 md:w-3/5 *:flex *:gap-1 lg:*:gap-2 text-center *:items-center grid-cols-5 *:border-l border-gray-300">
+						<div className="col-span-4 sm:col-span-2 px-1 lg:px-2.5 *:w-full">
 							{Object.values(game.points)
 								.slice(0, 3)
 								.map(point => (
@@ -81,7 +81,7 @@ const MatchDetails = ({ games = [], isCollapsed }) => {
 									</p>
 								))}
 						</div>
-						<div className="col-span-2 px-2.5 *:w-full">
+						<div className="col-span-2 max-sm:hidden px-1 lg:px-2.5 *:w-full">
 							{Object.values(game.points)
 								.slice(3, 6)
 								.map(point => (

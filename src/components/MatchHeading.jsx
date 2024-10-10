@@ -4,7 +4,7 @@ import { gameIcons } from '@/constants';
 const MatchHeading = ({ category, heading, image, point_labels = [] }) => {
 	return (
 		<div className="bg-blue-200 py-1.5 flex items-center text-background">
-			<div className="w-2/5 flex items-center gap-4 px-2.5">
+			<div className="md:w-2/5 w-1/3 flex items-center gap-4 px-2.5">
 				<div className="*:size-5">
 					{gameIcons.map(
 						game => game.name === category && game.icons
@@ -18,21 +18,21 @@ const MatchHeading = ({ category, heading, image, point_labels = [] }) => {
 						alt={heading}
 						className="object-cover"
 					/>
-					<p className="text-sm">{heading}</p>
+					<p className="text-xs md:text-sm max-sm:hidden">{heading}</p>
 				</div>
 			</div>
-			<div className="w-3/5 grid grid-cols-5 text-xs font-medium">
-				<div className="flex justify-evenly col-span-2">
+			<div className="md:w-3/5 w-2/3 grid grid-cols-5 text-xs font-medium">
+				<div className="flex justify-around md:justify-evenly col-span-4 sm:col-span-2">
 					{point_labels.slice(0, 3).map(label => (
 						<p key={label}>{label}</p>
 					))}
 				</div>
-				<div className="flex justify-evenly col-span-2">
+				<div className="flex max-sm:hidden justify-around md:justify-evenly col-span-2">
 					{point_labels.slice(3, 6).map(label => (
 						<p key={label}>{label}</p>
 					))}
 				</div>
-				<div className="flex justify-evenly col-span-1">
+				<div className="flex justify-around md:justify-evenly col-span-1">
 					<p>{point_labels[point_labels.length - 1]}</p>
 				</div>
 			</div>
