@@ -12,6 +12,7 @@ import BetInfo from './components/BetInfo';
 import History from './components/History';
 import Carousel from './components/Carousel';
 import TableTabs from './components/TableTabs';
+import BetHistory from './components/BetHistory';
 import Recommended from './components/Recommended';
 import ImageSlides from './components/ImageSlides';
 import FirstPeriod from './components/FirstPeriod';
@@ -22,4 +23,4 @@ import UpcomingEvents from './components/UpcomingEvents';
 
 export { Header, Carousel, Navbar, BetInfo, ImageSlides, Sidebar, Tabs, Bets, BetSlip, TableTabs,
   History, Footer, Table, Open, Matches, Recommended, UpcomingEvents, FirstPeriod, SecondPeriod,
-  MatchDetails, MatchHeading };
+  MatchDetails, MatchHeading, BetHistory };
